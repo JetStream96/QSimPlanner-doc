@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QSimPlanner Manual</title>
+		<style>
+		.box {
+			width:100%;		
+			margin: auto;
+			padding:5px;
+			background-color: rgb(224, 235, 245);
+		}
+		
+		.text-font{
+			font-family:Helvetica, Arial, sans-serif;
+		}
+		
+		.header-color{
+			color:#375eab;
+		}
+		
+		.title-color{
+			color:rgb(60,60,60);
+		}
+		
+		.screenshots{
+			width:auto;
+			height:auto;
+			float:top;
+			vertical-align: top;"
+		}
+		
+		p{
+			padding-left:8px;
+		}
+		
+	</style>
+	</head>
+	<body>
+		<div class="text-font">
+			<h1 class="title-color">QSimPlanner Manual</h1>	
+			<h2 class="box header-color">Aircraft Config</h2>
+			<p>From the aircraft configuration menu, you can add/edit/delete a profile.</p>
+			<p>After clicking "edit", various properties can be set. Fuel consumption, takeoff and landing profiles can be set to "None". However, if the fuel consumption profile is "None", that aircraft will not appear in fuel planning page. Takeoff/landing profiles are similar.</p>
+			<!-- All screenshot widths are 0.6 times its original. -->
+			<img src="images/config_menu_1.png" alt="image" style="max-width:259px;" class="screenshots">
+			<img src="images/config_menu_2.png" alt="image" style="max-width:337px;" class="screenshots">
+			
+			<h2 class="box header-color">Flight planning</h2>
+			<p>This is where the route planning and fuel calculation is done.</p>
+			<p>The route finder comes with a SID/STAR filter. There are 2 modes, blacklist and whitelist.</p>
+			<img src="images/filter_btn.png" alt="image" style="max-width:267px;" class="screenshots">
+			<img src="images/filter_dialog.png"  alt="image" style="max-width:154px;" class="screenshots">
+			
+			<p>It's possible to avoid finding a route passing through certain countries.</p>
+			<img src="images/avoid_country_menu.png" alt="image" style="max-width:280px;" class="screenshots">
+			<img src="images/avoid_country.png"  alt="image" style="max-width:234px;" class="screenshots">
+			
+			<p>The action menu contains 4 items:<br>
+				<ul>
+					<li type="square">Find route: Automatically finds the shortest route between the two airports. The SID/STAR filters,  avoided countries, and current oceanic tracks are taken into consideration.<br></li>
+					<li type="square">Analyze route:<br></li>
+					<li type="square">Show map: Plot the route found or analyzed with Google Map.<br></li>
+					<li type="square">Export: Export the route found or analyzed as a flight plan file, as set in options.</li>
+				</ul>	
+			</p>
+			
+			<p>The advanced tool can find or analyze routes which are:<br>
+				<ul>
+					<li type="square">From airport to airport<br></li>
+					<li type="square">From airport to waypoint<br></li>
+					<li type="square">From waypoint to airport<br></li>
+					<li type="square">From waypoint to waypoint</li>
+				</ul>				
+			</p>
+			<img src="images/advanced_route.png" alt="image" style="max-width:503px;" class="screenshots">
+		</div>
+		
+	</body>
+</html>
