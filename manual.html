@@ -4,12 +4,11 @@
 		<title>QSimPlanner Manual</title>
 		<style>
 		.box {
-			width:100%;		
-			margin: auto;
-			padding:5px;
+			width:auto;
 			background-color: rgb(224, 235, 245);
+			padding:5px;
 		}
-		
+				
 		.text-font{
 			font-family:Helvetica, Arial, sans-serif;
 		}
@@ -29,8 +28,26 @@
 			vertical-align: top;"
 		}
 		
+		.gray-background{
+			font-family:"Courier New";
+			padding-left:5px;
+			padding-right:5px;
+			background-color:rgb(225,225,225);
+		}
+		
+		.gray-box{
+			font-family:"Courier New";
+			padding:5px;
+			margin-left:10px;
+			background-color:rgb(225,225,225);
+		}
+		
 		p{
 			padding-left:8px;
+		}
+		
+		h4{			
+			font-weight: normal;
 		}
 		
 	</style>
@@ -55,13 +72,33 @@
 			<img src="images/avoid_country_menu.png" alt="image" style="max-width:280px;" class="screenshots">
 			<img src="images/avoid_country.png"  alt="image" style="max-width:234px;" class="screenshots">
 			
-			<p>The action menu contains 4 items:<br>
-				<ul>
-					<li type="square">Find route: Automatically finds the shortest route between the two airports. The SID/STAR filters,  avoided countries, and current oceanic tracks are taken into consideration.<br></li>
-					<li type="square">Analyze route:<br></li>
-					<li type="square">Show map: Plot the route found or analyzed with Google Map.<br></li>
-					<li type="square">Export: Export the route found or analyzed as a flight plan file, as set in options.</li>
-				</ul>	
+			<p>The actions menu contains 4 items:<br>
+				<div style="margin-left:40px;">
+					<h4 class="header-color">Find route</h4>
+					<p>Automatically finds the shortest route between the two airports. The SID/STAR filters,  avoided countries, and current oceanic tracks are taken into consideration.</p>
+					
+					<h4 class="header-color">Analyze route</h4>
+					<p>Read the route text and analyze it. The allowed format is <span class="gray-background">SID Waypoint Airway Waypoint ... Waypoint STAR</span>.<br> The SID and STAR are optional. Any SID/STAR/Airway can be replaced with <span class="gray-background">DCT</span>(direct), <span class="gray-background">AUTO</span>(finds the route between the two waypoints automatically) or <span class="gray-background">RAND</span>(find a random track between the two waypoints). Note that the departure and arrival airports/runways need to be entered correctly. Also all <span class="gray-background">DCT</span> can be omitted.</p>
+					
+					<p>For example, this route (from KLAS to KLAX) has correct format:</p>
+					<p class="gray-box">MCCRN4 WHIGG V21 HEC BASET3.HEC</p>
+					<p>We can let the route finder get the shortest path from <span class="gray-background">WHIGG</span> to <span class="gray-background">HEC</span> by replacing the airway with <span class="gray-background">AUTO</span>:</p>
+					<p class="gray-box">MCCRN4 WHIGG <span style="font-weight:bold">AUTO</span> HEC BASET3.HEC</p>
+					<p>Or even let it find the SID for us:</p>
+					<p class="gray-box"><span style="font-weight:bold">AUTO</span> HEC BASET3.HEC</p>
+					
+					<p>Another example is a route from PANC to PHNL. We can use <span class="gray-background">RAND</span> to find a random track between waypoints, i.e. a series of latitude/longitude coordinates or waypoints.</p>
+					<p class="gray-box">ANCHO8 TED <span style="font-weight:bold">RAND</span> ZIGIE KAENA2.ZIGIE</p>
+					<p>Or, if we do not know the SID and STAR to use, simply enter:</p>
+					<p class="gray-box"><span style="font-weight:bold">RAND</span></p>
+					<p>Click "Analyze Route" and then we get:</p>
+					<p class="gray-box">ANCHO8 TED 61N50 50N50 39N50 29N55 ZIGIE KAENA2.ZIGIE</p>
+					
+					<h4 class="header-color">Show map</h4>
+					<p>Plot the route found or analyzed with Google Map.</p>
+					<h4 class="header-color">Export</h4> 
+					<p>Export the route found or analyzed as a flight plan file, as set in options.</p>
+				</div>
 			</p>
 			
 			<p>The advanced tool can find or analyze routes which are:<br>
