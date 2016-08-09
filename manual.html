@@ -3,18 +3,26 @@
 	<head>
 		<title>QSimPlanner Manual</title>
 		<style>
-		.box {
+		h2{
 			width:auto;
 			background-color: rgb(224, 235, 245);
 			padding:5px;
-		}
-				
-		.text-font{
-			font-family:Helvetica, Arial, sans-serif;
+		}		
+		
+		h3{
+			padding:5px;
 		}
 		
-		.header-color{
+		h4{			
+			font-weight: normal;
+		}
+		
+		h2, h3, h4{
 			color:#375eab;
+		}	
+		
+		.text-font{
+			font-family:Helvetica, Arial, sans-serif;
 		}
 		
 		.title-color{
@@ -46,24 +54,21 @@
 			padding-left:8px;
 		}
 		
-		h4{			
-			font-weight: normal;
-		}
-		
 	</style>
 	</head>
 	<body>
 		<div class="text-font">
 			<h1 class="title-color">QSimPlanner Manual</h1>	
-			<h2 class="box header-color">Aircraft Config</h2>
+			<h2>Aircraft Config</h2>
 			<p>From the aircraft configuration menu, you can add/edit/delete a profile.</p>
 			<p>After clicking "edit", various properties can be set. Fuel consumption, takeoff and landing profiles can be set to "None". However, if the fuel consumption profile is "None", that aircraft will not appear in fuel planning page. Takeoff/landing profiles are similar.</p>
 			<!-- All screenshot widths are 0.6 times its original. -->
 			<img src="images/config_menu_1.png" alt="image" style="max-width:259px;" class="screenshots">
 			<img src="images/config_menu_2.png" alt="image" style="max-width:337px;" class="screenshots">
 			
-			<h2 class="box header-color">Flight planning</h2>
+			<h2>Flight planning</h2>
 			<p>This is where the route planning and fuel calculation is done.</p>
+			<h3>SID/STAR filter, route options</h3>
 			<p>The route finder comes with a SID/STAR filter. There are 2 modes, blacklist and whitelist.</p>
 			<img src="images/filter_btn.png" alt="image" style="max-width:267px;" class="screenshots">
 			<img src="images/filter_dialog.png"  alt="image" style="max-width:154px;" class="screenshots">
@@ -72,12 +77,13 @@
 			<img src="images/avoid_country_menu.png" alt="image" style="max-width:280px;" class="screenshots">
 			<img src="images/avoid_country.png"  alt="image" style="max-width:234px;" class="screenshots">
 			
+			<h3>Route actions</h3>
 			<p>The actions menu contains 4 items:<br>
 				<div style="margin-left:40px;">
-					<h4 class="header-color">Find route</h4>
+					<h4>Find route</h4>
 					<p>Automatically finds the shortest route between the two airports. The SID/STAR filters,  avoided countries, and current oceanic tracks are taken into consideration.</p>
 					
-					<h4 class="header-color">Analyze route</h4>
+					<h4>Analyze route</h4>
 					<p>Read the route text and analyze it. The allowed format is <span class="gray-background">SID Waypoint Airway Waypoint ... Waypoint STAR</span>.<br> The SID and STAR are optional. Any SID/STAR/Airway can be replaced with <span class="gray-background">DCT</span>(direct), <span class="gray-background">AUTO</span>(finds the route between the two waypoints automatically) or <span class="gray-background">RAND</span>(find a random track between the two waypoints). Note that the departure and arrival airports/runways need to be entered correctly. Also all <span class="gray-background">DCT</span> can be omitted.</p>
 					
 					<p>For example, this route (from KLAS to KLAX) has correct format:</p>
@@ -94,13 +100,14 @@
 					<p>Click "Analyze Route" and then we get:</p>
 					<p class="gray-box">ANCHO8 TED 61N50 50N50 39N50 29N55 ZIGIE KAENA2.ZIGIE</p>
 					
-					<h4 class="header-color">Show map</h4>
+					<h4>Show map</h4>
 					<p>Plot the route found or analyzed with Google Map.</p>
-					<h4 class="header-color">Export</h4> 
+					<h4>Export</h4> 
 					<p>Export the route found or analyzed as a flight plan file, as set in options.</p>
 				</div>
 			</p>
 			
+			<h3>Advanced tool</h3>
 			<p>The advanced tool can find or analyze routes which are:<br>
 				<ul>
 					<li type="square">From airport to airport<br></li>
